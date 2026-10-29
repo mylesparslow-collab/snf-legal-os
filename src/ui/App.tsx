@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { TEAM } from '../data/seed';
-import { fmt } from '../domain/dates';
-import { workQueue } from '../domain/derive';
+import { MATTER, TEAM } from '../data/seed';
+import { daysBetween, fmt } from '../domain/dates';
+import { target, workQueue } from '../domain/derive';
 import type { Role } from '../domain/types';
 import { StoreProvider, useStore } from '../state/store';
 import { DocProvider, go, parseHash, type Route } from './common';
@@ -41,21 +41,27 @@ function Shell() {
 
   return (
     <div className="shell">
-      <header className="topbar">
+      <aside className="sidebar">
         <a className="brand" href="#my-work">
           <span className="brand-mark" aria-hidden="true">§</span>
-          <span>SNF Transaction Workbench</span>
+          <span className="brand-name">SNF Transaction <br />Workbench</span>
         </a>
         <nav className="primary-nav" aria-label="Primary">
           <a href="#my-work" className={route.view === 'my-work' ? 'on' : ''}>
-            My Work{counts[s.role] ? <span className="count">{counts[s.role]}</span> : null}
+            <span>My Work</span>{counts[s.role] ? <span className="count">{counts[s.role]}</span> : null}
           </a>
-          <a href="#matter-overview" className={route.view === 'matter' ? 'on' : ''}>Matters</a>
-          <a href="#facilities" className={route.view === 'facilities' ? 'on' : ''}>Facilities</a>
+          <a href="#matter-overview" className={route.view === 'matter' ? 'on' : ''}><span>Matters</span></a>
+          <a href="#facilities" className={route.view === 'facilities' ? 'on' : ''}><span>Facilities</span></a>
         </nav>
-        <div className="topbar-right">
+        <a className="sb-matter" href="#matter-overview">
+          <span className="sb-label">Open matter</span>
+          <strong>{MATTER.name}</strong>
+          <span className="sb-sub">{MATTER.id} · {MATTER.side}</span>
+          <span className="sb-clock"><b className="num">{daysBetween(s.today, target(s))}</b> days to {fmt(target(s))}</span>
+        </a>
+        <div className="sidebar-foot">
           <label className="role-switch">
-            <span className="sr-only">Acting as</span>
+            <span className="sb-label">Acting as</span>
             <select id="role" value={s.role} onChange={(e) => dispatch({ type: 'role', role: e.target.value as Role })}>
               {TEAM.map((t) => (
                 <option key={t.id} value={t.role}>
@@ -66,9 +72,11 @@ function Shell() {
           </label>
           <button className="btn small ghost" onClick={() => setGuide(!guide)} aria-expanded={guide}>Demo guide</button>
         </div>
-      </header>
+      </aside>
+      <div className="content">
       <div className="synthetic-band">
-        Synthetic demonstration · all parties, facilities, identifiers and documents are fictional · demo date {fmt(s.today)} · rules are illustrative, not counsel-approved
+        <span className="band-tag">Synthetic demo</span>
+        All parties, facilities, identifiers and documents are fictional. Demo date {fmt(s.today)}. Rules are illustrative, not counsel-approved.
       </div>
 
       {guide && (
@@ -106,6 +114,7 @@ function Shell() {
         {route.view === 'matter' && <Matter tab={route.tab} focus={route.focus} />}
         {route.view === 'facilities' && <Facilities facility={route.facility} />}
       </main>
+      </div>
     </div>
   );
 }
