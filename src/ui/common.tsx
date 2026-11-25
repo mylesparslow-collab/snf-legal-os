@@ -9,7 +9,8 @@ export type Route =
   | { view: 'my-work' }
   | { view: 'matter'; tab: string; focus?: string }
   | { view: 'facilities'; facility?: string }
-  | { view: 'compiler' };
+  | { view: 'compiler' }
+  | { view: 'mso' };
 
 export function parseHash(h: string): Route {
   const x = h.replace(/^#/, '');
@@ -18,6 +19,7 @@ export function parseHash(h: string): Route {
     return { view: 'matter', tab: tab || 'overview', focus: rest.join('-') || undefined };
   }
   if (x.startsWith('compiler')) return { view: 'compiler' };
+  if (x.startsWith('mso')) return { view: 'mso' };
   if (x.startsWith('facilities')) return { view: 'facilities' };
   if (x.startsWith('facility-')) return { view: 'facilities', facility: x.slice(9) };
   return { view: 'my-work' };
