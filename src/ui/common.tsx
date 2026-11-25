@@ -10,7 +10,8 @@ export type Route =
   | { view: 'matter'; tab: string; focus?: string }
   | { view: 'facilities'; facility?: string }
   | { view: 'compiler' }
-  | { view: 'mso' };
+  | { view: 'mso' }
+  | { view: 'peer' };
 
 export function parseHash(h: string): Route {
   const x = h.replace(/^#/, '');
@@ -20,6 +21,7 @@ export function parseHash(h: string): Route {
   }
   if (x.startsWith('compiler')) return { view: 'compiler' };
   if (x.startsWith('mso')) return { view: 'mso' };
+  if (x.startsWith('peer')) return { view: 'peer' };
   if (x.startsWith('facilities')) return { view: 'facilities' };
   if (x.startsWith('facility-')) return { view: 'facilities', facility: x.slice(9) };
   return { view: 'my-work' };

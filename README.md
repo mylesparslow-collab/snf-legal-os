@@ -86,3 +86,21 @@ src/ui/                 screens
 ```
 
 Demo rules are illustrative and have not been reviewed by practice counsel.
+
+## Peer review clock
+
+The **Peer review** tab (`#peer`) follows four fictional medical staff matters at Alder Springs District Hospital, the acute care hospital near Cedar Hollow, run by a public health care district. Each matter is a list of dated events; code counts the clocks under Bus. & Prof. Code §§ 805–809.5, 45 CFR Part 60 (NPDB) and the hospital's bylaws.
+
+- **What is due**: every running clock across matters, soonest first, with weekend and holiday moves.
+- **Matters**: the events and clocks for one matter. The planted cases are a governing-body suspension whose two-working-day ratification window spans Thanksgiving; three short restrictions that add up to 30 days for the state report while the federal clock has not started; an 805.01 report filed the Monday after a Saturday deadline and a hearing set 64 days out against a 60-day limit; and a nurse practitioner's resignation under investigation, which is reportable under § 805 but outside the § 809 hearing rights and the mandatory NPDB rule.
+- **Bylaws**: hand-coded bylaw intervals, each quote checked against its page, then compared with the statute (the bylaws' 90 days to start a hearing conflicts with § 809.2(h)).
+- **Committee records**: where each record is kept and who a draft would send it to (Evid. Code § 1157). It flags; it does not decide privilege.
+- **District board**: closed-session agenda wording (Health & Saf. Code § 32155, Gov. Code § 54954.5(h)).
+- **Rules**: every day count with its source and status, the counting method, and where the research report differs. `src/peer/VERIFICATION.md` has the full list.
+
+```
+src/peer/params.ts    day counts, thresholds and fines, with source and status
+src/peer/hospital.ts  the fictional hospital, matters, bylaws, records, drafts and agenda
+src/peer/clock.ts     the clocks
+src/peer/checks.ts    bylaw, record, draft and agenda checks
+```

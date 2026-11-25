@@ -10,6 +10,7 @@ import { Facilities } from './Facilities';
 import { Matter } from './Matter';
 import { MsoAudit } from './MsoAudit';
 import { MyWork } from './MyWork';
+import { PeerReview } from './PeerReview';
 
 export function App() {
   return (
@@ -56,6 +57,7 @@ function Shell() {
           <a href="#facilities" className={route.view === 'facilities' ? 'on' : ''}>Facilities</a>
           <a href="#compiler" className={route.view === 'compiler' ? 'on' : ''}>Compiler</a>
           <a href="#mso" className={route.view === 'mso' ? 'on' : ''}>MSO audit</a>
+          <a href="#peer" className={route.view === 'peer' ? 'on' : ''}>Peer review</a>
         </nav>
         <div className="topbar-right">
           <label className="role-switch">
@@ -111,6 +113,7 @@ function Shell() {
         {route.view === 'facilities' && <Facilities facility={route.facility} />}
         {route.view === 'compiler' && <Compiler />}
         {route.view === 'mso' && <MsoAudit />}
+        {route.view === 'peer' && <PeerReview />}
       </main>
     </div>
   );
