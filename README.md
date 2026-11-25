@@ -46,6 +46,23 @@ src/compiler/exports.ts   xlsx and docx builders (xlsx.ts, docx.ts)
 
 This is a demonstration on fictional data. It is not cleared for firm use, and the rules need attorney verification.
 
+## MSO and friendly-PC audit
+
+The **MSO audit** tab (`#mso`) extends the Cedar Hollow deal. Ridgeline Care Management, the SNF's management company, also manages Alder Springs Medical Group, a fictional friendly professional medical corporation that staffs the facility. The tab checks that arrangement against SB 351 (Health & Saf. Code §§ 1190–1192), Corp. Code § 13401.5 and the nurse practitioner statutes:
+
+- **Who is covered**: whether each contract involves a physician or dental practice and a private equity group or an entity it controls. Ridgeline's ownership is read from the Compiler's record, so the 70/30 vs. 65/35 choice carries over. The SNF's own management agreement is outside SB 351.
+- **Clauses** and **Trace matrix**: hand-coded clauses, each quote checked word for word against its page, then classified (void, void in part, allowed under § 1191(h), unresolved, attorney review, outside SB 351).
+- **Cap table**: the § 13401.5 share cap and headcount tests, with a proposed fix.
+- **Nurse practitioners**: transition to practice and § 2837.104 dates.
+- **Rules**: every number with its source and status. `src/mso/VERIFICATION.md` lists what was read and where the research report differs.
+
+```
+src/mso/params.ts   numbers and dates, with source and status
+src/mso/rules.ts    the SB 351 items traced
+src/mso/deal.ts     fictional practice, contracts, clauses, cap table, NPs
+src/mso/audit.ts    applicability, clause findings, trace matrix, cap table, NP status
+```
+
 ## Run it
 
 ```bash

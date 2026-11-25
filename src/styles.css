@@ -409,6 +409,8 @@ mark { background: var(--mark); color: inherit; padding: 0 2px; border-radius: 2
   h1 { font-size: 1.5rem; }
   .topbar { gap: 10px; }
   .topbar-right { margin-left: 0; width: 100%; }
+  .primary-nav { max-width: 100%; overflow-x: auto; scrollbar-width: thin; }
+  .primary-nav a { white-space: nowrap; }
   .role-switch { flex: 1; }
   .role-switch select { width: 100%; max-width: none; }
   .brand span:last-child { font-size: 0.92rem; }
@@ -449,3 +451,4 @@ mark { background: var(--mark); color: inherit; padding: 0 2px; border-radius: 2
 .compiler .issues-panel ul { margin: 0; padding-left: 18px; font-size: 0.88rem; }
 .compiler .tag-pill { margin-left: 6px; }
 .compiler .btn-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+

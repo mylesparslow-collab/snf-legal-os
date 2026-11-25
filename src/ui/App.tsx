@@ -8,6 +8,7 @@ import { DocProvider, go, parseHash, type Route } from './common';
 import { Compiler } from './Compiler';
 import { Facilities } from './Facilities';
 import { Matter } from './Matter';
+import { MsoAudit } from './MsoAudit';
 import { MyWork } from './MyWork';
 
 export function App() {
@@ -54,6 +55,7 @@ function Shell() {
           <a href="#matter-overview" className={route.view === 'matter' ? 'on' : ''}>Matters</a>
           <a href="#facilities" className={route.view === 'facilities' ? 'on' : ''}>Facilities</a>
           <a href="#compiler" className={route.view === 'compiler' ? 'on' : ''}>Compiler</a>
+          <a href="#mso" className={route.view === 'mso' ? 'on' : ''}>MSO audit</a>
         </nav>
         <div className="topbar-right">
           <label className="role-switch">
@@ -108,6 +110,7 @@ function Shell() {
         {route.view === 'matter' && <Matter tab={route.tab} focus={route.focus} />}
         {route.view === 'facilities' && <Facilities facility={route.facility} />}
         {route.view === 'compiler' && <Compiler />}
+        {route.view === 'mso' && <MsoAudit />}
       </main>
     </div>
   );
