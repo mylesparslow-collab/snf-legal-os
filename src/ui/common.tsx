@@ -8,7 +8,8 @@ import type { EvidenceRef, Link } from '../domain/types';
 export type Route =
   | { view: 'my-work' }
   | { view: 'matter'; tab: string; focus?: string }
-  | { view: 'facilities'; facility?: string };
+  | { view: 'facilities'; facility?: string }
+  | { view: 'compiler' };
 
 export function parseHash(h: string): Route {
   const x = h.replace(/^#/, '');
@@ -16,6 +17,7 @@ export function parseHash(h: string): Route {
     const [, tab, ...rest] = x.split('-');
     return { view: 'matter', tab: tab || 'overview', focus: rest.join('-') || undefined };
   }
+  if (x.startsWith('compiler')) return { view: 'compiler' };
   if (x.startsWith('facilities')) return { view: 'facilities' };
   if (x.startsWith('facility-')) return { view: 'facilities', facility: x.slice(9) };
   return { view: 'my-work' };
