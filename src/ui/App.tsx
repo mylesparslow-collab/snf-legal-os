@@ -5,6 +5,7 @@ import { workQueue } from '../domain/derive';
 import type { Role } from '../domain/types';
 import { StoreProvider, useStore } from '../state/store';
 import { DocProvider, go, parseHash, type Route } from './common';
+import { Compiler } from './Compiler';
 import { Facilities } from './Facilities';
 import { Matter } from './Matter';
 import { MyWork } from './MyWork';
@@ -52,6 +53,7 @@ function Shell() {
           </a>
           <a href="#matter-overview" className={route.view === 'matter' ? 'on' : ''}>Matters</a>
           <a href="#facilities" className={route.view === 'facilities' ? 'on' : ''}>Facilities</a>
+          <a href="#compiler" className={route.view === 'compiler' ? 'on' : ''}>Compiler</a>
         </nav>
         <div className="topbar-right">
           <label className="role-switch">
@@ -105,6 +107,7 @@ function Shell() {
         {route.view === 'my-work' && <MyWork key={s.role} />}
         {route.view === 'matter' && <Matter tab={route.tab} focus={route.focus} />}
         {route.view === 'facilities' && <Facilities facility={route.facility} />}
+        {route.view === 'compiler' && <Compiler />}
       </main>
     </div>
   );

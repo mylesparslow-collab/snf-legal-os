@@ -432,3 +432,20 @@ mark { background: var(--mark); color: inherit; padding: 0 2px; border-radius: 2
   .conds .c-main { grid-column: 1 / -1; min-width: 0; }
   .conds .c-act { grid-column: 1 / -1; padding-top: 0; }
 }
+
+/* ---------- compiler */
+.compiler .compiler-banner { background: var(--warn-bg); border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent); margin-bottom: 16px; }
+.compiler-toolbar { margin-bottom: 16px; align-items: flex-end; }
+.compiler .section-title { margin-top: 22px; }
+.compiler .lede { margin-bottom: 14px; }
+.compiler .seg-control { margin-bottom: 4px; }
+.compiler .mono { font-family: var(--f-mono); font-size: 0.82rem; white-space: nowrap; }
+.compiler .quote { font-family: var(--f-display); font-size: 0.9rem; max-width: 42ch; }
+.compiler .checks { list-style: none; margin: 0; padding: 0; font-size: 0.78rem; display: flex; flex-direction: column; gap: 2px; }
+.compiler .checks .ok { color: var(--go); }
+.compiler .checks .fail { color: var(--bad); font-weight: 600; }
+.compiler .param-input { width: 9ch; font-family: var(--f-mono); padding: 4px 6px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); color: var(--ink); }
+.compiler .issues-panel { margin-bottom: 14px; border-left: 3px solid var(--decide); }
+.compiler .issues-panel ul { margin: 0; padding-left: 18px; font-size: 0.88rem; }
+.compiler .tag-pill { margin-left: 6px; }
+.compiler .btn-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }

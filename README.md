@@ -23,6 +23,29 @@ The scripted scenario covers thesis section 9: representation and scope, importe
 
 Unresolved stays unresolved: OHCA applicability never clears on its own, no countdown is shown for it, and an exceptional CDPH pathway cannot be selected without an agency document in the record.
 
+## Transaction compiler (Stage 3)
+
+The **Compiler** tab works one acquisition (fictional: Cedar Hollow Care Center, counsel Thornwood Garza LLP) through three agency views from a single ownership record:
+
+- **Ownership**: exact decimal arithmetic on BigInt rationals. Every path multiplies the percentage at each tier, owners of every entity must add to exactly 100%, and unnamed holders (a fund's other limited partners) stay unresolved, with the share that would push one of them over a threshold.
+- **CDPH (AB 1502)**, **CMS-855A** (owners, managing control, SNF organizational structure including 0% LLC managers, additional disclosable parties) and **OHCA** (filer thresholds, material change circumstances, control test, noticing entities). OHCA never clears on its own.
+- **Dates** counted back from the closing date (CDPH T-120, OHCA T-90, and so on), with weekend and holiday moves.
+- **Document check**: a model read the synthetic deal documents once and proposed facts with page and quote. Code accepts a fact only when the quote appears word for word, the parties are named, and the quote states the percentage. The recorded run is in `src/compiler/extraction.recorded.json`; `scripts/extract.ts` re-runs it.
+- **Rules**: every threshold and day count is an editable parameter with its source and status. See `src/compiler/VERIFICATION.md` for what was and was not checked against primary sources.
+- **Exports**: an Excel workbook whose paths, totals, threshold tests and dates are live formulas over the Edges and Parameters sheets, and a Word memo with the views, dates, open items, extraction log and rule register. `npx vite-node scripts/write-exports.ts out/` writes both.
+
+```
+src/compiler/decimal.ts   exact rational arithmetic
+src/compiler/graph.ts     validation, indirect holdings, unnamed-pool crossing
+src/compiler/params.ts    every legal number, with source and verification status
+src/compiler/views.ts     CDPH, CMS-855A and OHCA views
+src/compiler/schedule.ts  dates counted from closing
+src/compiler/extract.ts   quote verification for model-proposed facts
+src/compiler/exports.ts   xlsx and docx builders (xlsx.ts, docx.ts)
+```
+
+This is a demonstration on fictional data. It is not cleared for firm use, and the rules need attorney verification.
+
 ## Run it
 
 ```bash

@@ -1,0 +1,216 @@
+{
+  "model": "gemini-3.8-flash",
+  "recordedAt": "2026-11-25",
+  "candidates": [
+    {
+      "kind": "ownership",
+      "holder": "Bayline Senior Holdings LLC",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": "90",
+      "role": null,
+      "docId": "opco-oa",
+      "page": 1,
+      "quote": "As of the Effective Date, Bayline Senior Holdings LLC holds a ninety percent (90%) Percentage Interest and Dana Whitcombe holds a ten percent (10%) Percentage Interest."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Dana Whitcombe",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": "10",
+      "role": null,
+      "docId": "opco-oa",
+      "page": 1,
+      "quote": "As of the Effective Date, Bayline Senior Holdings LLC holds a ninety percent (90%) Percentage Interest and Dana Whitcombe holds a ten percent (10%) Percentage Interest."
+    },
+    {
+      "kind": "role",
+      "holder": "Harbor Crest GP IV, LLC",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": null,
+      "role": "Special Member",
+      "docId": "opco-oa",
+      "page": 1,
+      "quote": "Harbor Crest GP IV, LLC is admitted as the Special Member and holds no Percentage Interest."
+    },
+    {
+      "kind": "role",
+      "holder": "Priya Natarajan",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": null,
+      "role": "Manager",
+      "docId": "opco-oa",
+      "page": 2,
+      "quote": "The initial Manager is Priya Natarajan, who holds no Percentage Interest and may be removed only by Members holding a majority of the Percentage Interests."
+    },
+    {
+      "kind": "control",
+      "holder": "Harbor Crest GP IV, LLC",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": null,
+      "role": null,
+      "docId": "opco-oa",
+      "page": 3,
+      "quote": "No annual operating budget may be adopted, and no Administrator of the Facility may be removed, without the prior written consent of the Special Member."
+    },
+    {
+      "kind": "role",
+      "holder": "Lumen Clinical Advisors LLC",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": null,
+      "role": "Consultant",
+      "docId": "opco-oa",
+      "page": 3,
+      "quote": "The Company shall engage Lumen Clinical Advisors LLC to provide clinical consulting services."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Harbor Crest Fund IV, L.P.",
+      "of": "Bayline Senior Holdings LLC",
+      "pct": "62.5",
+      "role": null,
+      "docId": "bsh-oa",
+      "page": 1,
+      "quote": "Harbor Crest Fund IV, L.P.: 62.5%."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Ojai Family Trust",
+      "of": "Bayline Senior Holdings LLC",
+      "pct": "25",
+      "role": null,
+      "docId": "bsh-oa",
+      "page": 1,
+      "quote": "Ojai Family Trust, Elena Ojai, Trustee: 25%."
+    },
+    {
+      "kind": "role",
+      "holder": "Elena Ojai",
+      "of": "Ojai Family Trust",
+      "pct": null,
+      "role": "Trustee",
+      "docId": "bsh-oa",
+      "page": 1,
+      "quote": "Ojai Family Trust, Elena Ojai, Trustee: 25%."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Marisol Vega",
+      "of": "Bayline Senior Holdings LLC",
+      "pct": "12.5",
+      "role": null,
+      "docId": "bsh-oa",
+      "page": 1,
+      "quote": "Marisol Vega: 12.5%."
+    },
+    {
+      "kind": "role",
+      "holder": "Harbor Crest GP IV, LLC",
+      "of": "Harbor Crest Fund IV, L.P.",
+      "pct": null,
+      "role": "General Partner",
+      "docId": "hcf-lpa",
+      "page": 4,
+      "quote": "Harbor Crest GP IV, LLC, as General Partner, holds a one percent (1%) interest in the Partnership."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Harbor Crest GP IV, LLC",
+      "of": "Harbor Crest Fund IV, L.P.",
+      "pct": "1",
+      "role": null,
+      "docId": "hcf-lpa",
+      "page": 4,
+      "quote": "Harbor Crest GP IV, LLC, as General Partner, holds a one percent (1%) interest in the Partnership."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Sierra Teachers' Co-Invest, L.P.",
+      "of": "Harbor Crest Fund IV, L.P.",
+      "pct": "33",
+      "role": null,
+      "docId": "hcf-lpa",
+      "page": 4,
+      "quote": "Sierra Teachers' Co-Invest, L.P. holds a thirty-three percent (33%) interest as a Limited Partner."
+    },
+    {
+      "kind": "role",
+      "holder": "Ridgeline Care Management, Inc.",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": null,
+      "role": "Management Company",
+      "docId": "mgmt",
+      "page": 1,
+      "quote": "Ridgeline Care Management, Inc. shall manage the day-to-day operations of the Facility, prepare the operating budget, and direct the hiring, firing and supervision of direct care staff, subject to the Owner's approval rights."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Harbor Crest Fund IV, L.P.",
+      "of": "Ridgeline Care Management, Inc.",
+      "pct": "65",
+      "role": null,
+      "docId": "mgmt",
+      "page": 2,
+      "quote": "Harbor Crest Fund IV, L.P. owns sixty-five percent (65%) of the outstanding shares of Ridgeline Care Management, Inc., and Tomas Reyes owns thirty-five percent (35%)."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Tomas Reyes",
+      "of": "Ridgeline Care Management, Inc.",
+      "pct": "35",
+      "role": null,
+      "docId": "mgmt",
+      "page": 2,
+      "quote": "Harbor Crest Fund IV, L.P. owns sixty-five percent (65%) of the outstanding shares of Ridgeline Care Management, Inc., and Tomas Reyes owns thirty-five percent (35%)."
+    },
+    {
+      "kind": "role",
+      "holder": "Tomas Reyes",
+      "of": "Ridgeline Care Management, Inc.",
+      "pct": null,
+      "role": "President and Chief Executive Officer",
+      "docId": "mgmt",
+      "page": 2,
+      "quote": "Officers: Tomas Reyes, President and Chief Executive Officer."
+    },
+    {
+      "kind": "role",
+      "holder": "Tomas Reyes",
+      "of": "Ridgeline Care Management, Inc.",
+      "pct": null,
+      "role": "Director",
+      "docId": "mgmt",
+      "page": 2,
+      "quote": "Directors: Tomas Reyes and Hannah Cole."
+    },
+    {
+      "kind": "role",
+      "holder": "Hannah Cole",
+      "of": "Ridgeline Care Management, Inc.",
+      "pct": null,
+      "role": "Director",
+      "docId": "mgmt",
+      "page": 2,
+      "quote": "Directors: Tomas Reyes and Hannah Cole."
+    },
+    {
+      "kind": "ownership",
+      "holder": "Westmark Healthcare REIT, Inc.",
+      "of": "Cedar Hollow Realty LLC",
+      "pct": "100",
+      "role": null,
+      "docId": "lease",
+      "page": 1,
+      "quote": "Cedar Hollow Realty LLC, a wholly owned subsidiary of Westmark Healthcare REIT, Inc., owns the real property commonly known as Cedar Hollow Care Center and leases it to Cedar Hollow Operations LLC as Tenant under this Master Lease."
+    },
+    {
+      "kind": "role",
+      "holder": "Cedar Hollow Realty LLC",
+      "of": "Cedar Hollow Operations LLC",
+      "pct": null,
+      "role": "Landlord",
+      "docId": "lease",
+      "page": 1,
+      "quote": "Cedar Hollow Realty LLC, a wholly owned subsidiary of Westmark Healthcare REIT, Inc., owns the real property commonly known as Cedar Hollow Care Center and leases it to Cedar Hollow Operations LLC as Tenant under this Master Lease."
+    }
+  ]
+}
